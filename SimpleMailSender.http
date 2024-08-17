@@ -1,6 +1,0 @@
-@SimpleMailSender_HostAddress = http://localhost:5291
-
-GET {{SimpleMailSender_HostAddress}}/weatherforecast/
-Accept: application/json
-
-###

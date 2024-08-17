@@ -16,6 +16,11 @@ namespace SimpleMailSender.Controllers
             _emailQueueService = emailQueueService;
         }
 
+        /// <summary>
+        /// Send an email
+        /// </summary>
+        /// <param name="emailRequest"></param>
+        /// <returns></returns>
         [HttpPost("send-email")]
         public async Task<IActionResult> SendEmail([FromBody] EmailRequest emailRequest)
         {
