@@ -34,7 +34,11 @@ namespace SimpleMailSender.Services.Concrete
             }
             catch (Exception)
             {
+                // If email sending fails, enqueue the email for a retry
                 _failedEmails.Enqueue(email);
+
+                // Schedule the resend process
+                ScheduleFailedEmailsResend();
             }
         }
 
